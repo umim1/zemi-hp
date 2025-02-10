@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/*共通部分
+-----------------------------------*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.back {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
+.back-home {
+    background-image: url(../images/上_v2_smartphone.png);
+}
+.font-english {
+    font-family: "Philosopher", sans-serif;
+    font-weight: normal;
+}
+
+/*h1
+----------------------------------*/
+.header {
+    padding-top: .5rem;
+}
+.h1 {
+    text-align: center;
+}
+.logo {
+    width: 300px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.4rem;
+    list-style: none;
+    padding: 0 .5rem;
+}
+nav a {
+    color: #432;
+}
+nav a:hover {
+    color: #0bd;
+}
+
+/*h2
+-----------------------------------*/
+.h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.4;
+    padding: 0 .5rem;
+}
+.photo {
+    width: 1000px; /* 通常の幅 */
+    height: auto; /* 高さは自動調整 */
+}
+
+
+/*h3
+-----------------------------------*/
+.about {
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 5rem auto 4rem;
+}
+.h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.about p {
+    margin-bottom: 3rem;
+}
+
+/*finction
+-----------------------------------*/
+.function {
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+.btn:hover {
+    background-color: #0090aa;
+}
+
+/*フッター
+-----------------------------------*/
+.footer {
+    background-image: url(../images/下_v2_smartphone.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+}
+.information {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+.table {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+.table th,
+.table td {
+    border-bottom: 1px solid #c9c2bc;
+}
+table th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+table td {
+    padding: 1rem 0;
+}
+
+/*コピーライト
+-----------------------------------*/
+.copyright {
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+@media (min-width: 800px) {
+    .wrapper {
+        max-width: 1120px;
+        margin: auto;
+        padding: 0 1.5rem;
+    }
+    .h1 {
+        text-align: center;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+    }
+    .h2 {
+        font-size: 4rem;
+    }
+    .p {
+        font-size: 1.2rem;
+    }
+    .back-home {
+        background-image: url(../images/上_v2_pc.png);
+    }
+    .footer {
+        background-image: url(../images/下_v2_pc.png);
+    }    
+}

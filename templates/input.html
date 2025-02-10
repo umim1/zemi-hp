@@ -1,0 +1,16 @@
+{% extends "base2.html" %}
+
+{% block title %}
+    <h1>佐治がwaseda.jpに個別で返信します</h1>
+{% endblock %}
+
+{% block content %}
+    {% from "_formhelpers.html" import render_field %}
+    <form method="POST" novalidate>
+        {{ form.csrf_token }}
+        {{ render_field(form.content) }}
+        {{ render_field(form.email) }}
+        <br>
+        {{ form.submit() }}
+    </form>
+{% endblock %}

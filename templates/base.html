@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}タイトル{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ファビコン -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="back back-home">
+        <header class="header wrapper">
+            <h1 class="h1">
+                <a href="{{ url_for('index') }}"><img class="logo"src="{{ url_for('static', filename='images/sazi-logo.png') }}" alt="佐治ゼミホーム"></a>
+            </h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="{{ url_for('page1') }}">研究内容</a></li>
+                    <li><a href="{{ url_for('page2') }}">担当教員</a></li>
+                    <li><a href="{{ url_for('page3') }}">学外活動</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2 class="h2 font-english">{% block copy %}キャッチコピー{% endblock %}</h2>
+        <br>
+        <img class="girl"src="{{ url_for('static', filename='images/女の子.png') }}" alt="佐治ゼミホーム"></a>
+        <section class="about">
+            <h3 class="h3">{% block hello %}挨拶{% endblock %}</h3>
+            <p class="p">{% block content %}内容{% endblock %}</p>
+            <div class="function">
+                <a class="btn" href="{{ url_for('input') }}">質問はこちら！</a>
+            </div> 
+        </section>
+
+    <footer class="footer">
+        <h3 class="information font-english">Information</h3>
+        <table class="table">
+            <tr>
+                <th>住所</th>
+                <td>早稲田大学所沢キャンパス<br>〇号館△室</td>
+            </tr>
+            <tr>
+                <th>学問領域</th>
+                <td>言語 認知<br>コミュニケーション</td>
+            </tr>
+            <tr>
+                <th>メール</th>
+                <td>xxx@gmail.com</td>
+            </tr>
+            <tr>
+                <th>開講時間</th>
+                <td>3年:木曜4.5限<br>4年:木曜3限</td>
+            </tr>
+        </table>
+        <div class="copyright">
+            <small>&copy; 佐治ゼミ</small>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

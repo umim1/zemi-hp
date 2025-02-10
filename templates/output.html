@@ -1,0 +1,15 @@
+{% extends "base2.html" %}
+
+{% block title %}
+    <h1>データが送信されました。お返事に〇日ほど頂戴しております。</h1>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <ul>
+            <li>ご質問内容 : {{session['content']}}</li>
+            <li>メールアドレス : {{session['email']}}</li>
+        </ul>
+        <p><a href="{{ url_for('input') }}">入力画面に戻る</a></p>
+    </div>
+{% endblock %}
