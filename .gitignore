@@ -1,0 +1,8 @@
+# Windows の不要ファイル
+desktop.ini
+
+# Pythonのキャッシュを無視
+__pycache__/
+
+# 環境変数ファイル（.env）をGitにアップしないようにする
+.env
